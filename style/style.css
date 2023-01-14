@@ -1,0 +1,503 @@
+* , *:after, *:before{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: tahoma,arial;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+/* navbar*/
+.navbar{
+    padding: 25px 0px;
+    overflow: hidden;
+    position: relative;
+}
+.navbar .log {
+    width: 50%;
+    float: left;
+}
+.navbar .ul-list {
+    width: 50%;
+    float:  left;
+    list-style: none;
+}
+.navbar .log .logo-text{
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar input, .navbar label {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+}
+.navbar input:checked ~ .ul-list{
+    display: block;
+}
+.navbar input:checked ~ label{
+    background: url('/images/Navbar/close.png') no-repeat;
+    background-size: cover;
+}
+.navbar input {
+    display: none;
+}
+.navbar label {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url('/images/Navbar/open.png') no-repeat;
+    background-size: cover;
+    padding: 15px;
+    cursor: pointer;
+}
+.navbar .ul-list .list-item {
+    display: inline-block;
+}
+.navbar .ul-list .list-item a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+    font-weight: bold;
+}
+.navbar .ul-list .list-item a:hover{
+    color: #eb5424;
+    border-bottom: 1px solid #eb5424;
+}
+/* media for navbar*/
+@media (min-width : 1269px){
+    .navbar label {
+        display: none;
+    }
+}
+@media (max-width : 1268px){
+    .navbar .log {
+        width: 100%;
+        float: none;
+    }
+    .navbar .ul-list {
+        width: 100%;
+        float:  none;
+        margin-top: 15px;
+        display: none;
+    }
+    .navbar .ul-list .list-item {
+        display: block;
+        text-align: center;
+    }
+}
+/*   =========home===========*/
+.home {
+    height: 550px;
+    background: url(/images/Home/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.home .name{
+    padding-top: 112px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+.home .job{
+    padding-top: 30px;
+    color: #eb5424;
+    font-size: 20px;
+}
+.home .info{
+    padding-top: 10px;
+    color: gray;
+    font-size: 15px;
+}
+.home .info span{
+    color: #000;
+}
+.home .btn{
+    padding: 12px 30px;
+    margin-top: 30px;
+    border: 0;
+    font-size: 20px;
+    color: white;
+    background-color: #eb5424;
+    cursor: pointer;
+    font-weight: bold;
+}
+.home .btn:hover{
+    background-color: white;
+    color: #eb5424;
+}
+/* ===========work===========*/
+.work{
+    height: auto;
+    padding: 50px 0px;
+    background: #fff;
+}
+.work h2{
+    font-size: 50px;
+    font-weight: bold;
+}
+.work .part{
+    margin-top: 50px;
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid grey;
+    height: auto;
+    padding: 100px 0px;
+    margin-left: 3%;
+}
+.work .part .icon{
+    color: grey;
+    margin-bottom: 20px;
+}
+.work .part h4{
+    color: #eb5424;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.work .part hr{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.work .part p{
+    font-size: 15px;
+    color: gray;
+    padding: 20px;
+}
+@media (max-width:768px){
+    .work .part{
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+    }
+}
+/* =========portfoilio===========*/
+.port {
+    padding-top: 50px;
+    height: auto;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.port h1{
+    text-align: center;
+    font-size: 30px;
+}
+.port ul{
+    text-align: center;
+    list-style: none;
+    margin: 20px 0px;
+}
+.port li{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+.port li:hover{
+    background-color: #eb5424;
+    color: #fff;
+}
+.port .active{
+    background-color: #eb5424;
+    color: #fff;
+}
+.box div{
+    width: 25%;
+    float: left;
+    font-size: 0;
+    position: relative;
+}
+.box img{
+    width: 100%;
+    
+}
+.box div .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(245, 116, 77, 0.5);
+    font-size: 15px;
+    opacity: 0;
+}
+
+.box div .overlay span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #eb5424;
+}
+.box div:hover .overlay{
+    opacity: 1;
+}
+@media (max-width:768px){
+    .box div{
+        width: 50%;
+    }
+}
+@media (max-width:568px){
+    .box div{
+        width: 100%;
+    }
+    .box div .overlay span{
+        padding: 4px 10px;
+    }
+    .port li{
+        display: inline;
+        padding: 5px;
+    }
+}
+/* ===========skilles==============*/
+.skills{
+    padding: 50px 0px;
+    overflow: hidden;
+}
+.skills .profile{
+    width: 50%;
+    float: left;
+}
+.skills .skill{
+    width: 50%;
+    float: left;
+}
+.profile h2 , .skill h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.profile span{
+    font-weight: bold;
+}
+.profile ul{
+    list-style: none;
+}
+.profile li{
+    margin-bottom: 8px;
+}
+.profile ul li span{
+    width: 100px;
+    display: inline-block;
+    font-weight: bold;
+}
+.profile ul li a{
+    color: #eb5424;
+    font-style: none;
+    text-decoration: none;
+}
+.skill p{
+    font-size: 16px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.bar{
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px 0px;
+}
+.bar .tit{
+    float: left;
+    margin-left: 30px;
+}
+.bar .per{
+    float: right;
+    margin-right: 80px;
+}
+.bar .parent {
+    height: 2px;
+    background: #f8f8f8;
+    clear: both;
+    position: relative;
+    top: 4.8px;
+}
+.bar .parent span{
+    background: #eb5424;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.bar .parent .sp1{
+    width: 100%;
+}
+.bar .parent .sp2{
+    width: 90%;
+}
+.bar .parent .sp3{
+    width: 75%;
+}
+@media (max-width:568px){
+    .skills .profile,.skills .skill{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+}
+/* ==========creative============*/
+.creative{
+    height: auto;
+    background: url(/images/creative/about-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.know{
+    height: 500px;
+    padding-top: 100px;
+    width: 50%;
+    float: right;
+}
+.know h2{
+    font-size: 50px;
+    font-weight: bold;
+}
+.know h3{
+    font-size: 25px;
+    color: #eb5424;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.know p{
+    color: #888;
+    line-height: 1.8;
+    padding-top: 20px;
+}
+@media (max-width:568px){
+    .know{
+        width: 100%;
+        float: none;
+        text-align: center;
+        height: auto;
+    }
+}
+/*============social==============*/
+.social{
+    height: auto;
+    overflow: hidden;
+}
+.social .soc{
+    width: 33.33%;
+    float: left;
+    box-sizing: border-box;
+    padding: 60px 0px 60px 60px;
+}
+.social .face{
+    background: #3b5998;
+}
+.social .twitter{
+    background: #498cbf;
+}
+.social .pintrest{
+    background: #cc2127;
+}
+.social .soc i{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    margin-right: 20px;
+    color: #eb5424;
+}
+.social .soc p{
+    font-size: 25px;
+    color: #fff;
+}
+.social .soc span{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+@media (max-width:900px){
+    .social .soc{
+        width: 100%;
+        float: none;
+    }
+    .social .soc p{
+        text-align: right;
+        padding-right: 80px;
+        font-size: 20px;
+        
+    }
+    .social .soc i{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+/*===========drop===============*/
+.drop{
+    padding: 50px 0px;
+    text-align: center;
+}
+.drop h2{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.drop span{
+    font-weight: normal;
+    color: #888;
+}
+.drop form{
+    width: 70%;
+    margin: auto;
+}
+.drop form input{
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.drop form .input{
+    overflow: hidden;
+}
+.drop form .input input{
+    width: 49%;
+    box-sizing: border-box;
+}
+.drop form .input input[type=text]{
+    float: left;
+}
+.drop form .input input[type=email]{
+    float: right;
+}
+.drop form input.sup{
+    width: 100%;
+}
+.drop form textarea{
+    width: 100%;
+    background: #ccc;
+    border: none;
+}
+.drop form input[type=submit]{
+    width: 60%;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #888;
+    cursor: pointer;
+    margin-top: 10px;
+}
+@media (max-width:768px){
+    .drop form{
+        width: 100%;
+    }
+    .drop h2{
+        font-size: 30px;
+    }
+}
+/*============footer===========*/
+.footer{
+    text-align: center;
+    font-size: 15px;
+    color: #888;
+    padding: 10px 0px;
+}
